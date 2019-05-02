@@ -9,7 +9,8 @@
 import UIKit
 
 class CharacterCollectionViewCell: UICollectionViewCell {
-    override func prepareForReuse() {
-        print("Aaaaa")
-    }
+    
+    @IBOutlet weak var characterImage: UIImageView!
+    
+    @IBOutlet weak var characterName: UILabel!
 }

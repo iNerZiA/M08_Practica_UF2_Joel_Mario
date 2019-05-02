@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EF14894A227B254200C4207A /* ListOfCharactersCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF148949227B254200C4207A /* ListOfCharactersCollectionViewController.swift */; };
-		EF14894C227B266300C4207A /* CharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF14894B227B266300C4207A /* CharacterCollectionViewCell.swift */; };
+		EF14894E227B2C7900C4207A /* CharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF14894D227B2C7900C4207A /* CharacterCollectionViewCell.swift */; };
 		EF59650722773D280022BC81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF59650622773D280022BC81 /* AppDelegate.swift */; };
 		EF59650922773D280022BC81 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF59650822773D280022BC81 /* ViewController.swift */; };
 		EF59650C22773D280022BC81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF59650A22773D280022BC81 /* Main.storyboard */; };
@@ -17,8 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EF148949227B254200C4207A /* ListOfCharactersCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfCharactersCollectionViewController.swift; sourceTree = "<group>"; };
-		EF14894B227B266300C4207A /* CharacterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCell.swift; sourceTree = "<group>"; };
+		EF14894D227B2C7900C4207A /* CharacterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCell.swift; sourceTree = "<group>"; };
 		EF59650322773D280022BC81 /* M08_Practica_UF2_Joel_Mario.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = M08_Practica_UF2_Joel_Mario.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF59650622773D280022BC81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF59650822773D280022BC81 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,12 +58,11 @@
 			children = (
 				EF59650622773D280022BC81 /* AppDelegate.swift */,
 				EF59650822773D280022BC81 /* ViewController.swift */,
-				EF148949227B254200C4207A /* ListOfCharactersCollectionViewController.swift */,
+				EF14894D227B2C7900C4207A /* CharacterCollectionViewCell.swift */,
 				EF59650A22773D280022BC81 /* Main.storyboard */,
 				EF59650D22773D290022BC81 /* Assets.xcassets */,
 				EF59650F22773D290022BC81 /* LaunchScreen.storyboard */,
 				EF59651222773D290022BC81 /* Info.plist */,
-				EF14894B227B266300C4207A /* CharacterCollectionViewCell.swift */,
 			);
 			path = M08_Practica_UF2_Joel_Mario;
 			sourceTree = "<group>";
@@ -141,10 +138,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF14894C227B266300C4207A /* CharacterCollectionViewCell.swift in Sources */,
+				EF14894E227B2C7900C4207A /* CharacterCollectionViewCell.swift in Sources */,
 				EF59650922773D280022BC81 /* ViewController.swift in Sources */,
 				EF59650722773D280022BC81 /* AppDelegate.swift in Sources */,
-				EF14894A227B254200C4207A /* ListOfCharactersCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
