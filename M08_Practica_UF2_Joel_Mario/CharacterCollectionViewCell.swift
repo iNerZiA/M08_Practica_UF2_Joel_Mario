@@ -10,6 +10,6 @@ import UIKit
 
 class CharacterCollectionViewCell: UICollectionViewCell {
     override func prepareForReuse() {
-        <#code#>
+        print("Aaaaa")
     }
 }
