@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="M08_Practica_UF2_Joel_Mario" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="M08_Practica_UF2_Joel_Mario" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -63,11 +63,61 @@
                     <navigationItem key="navigationItem" id="fQd-ps-fLb"/>
                     <connections>
                         <outlet property="collectionView" destination="je9-Yj-vaE" id="1m5-gV-AeA"/>
+                        <segue destination="EHu-46-stg" kind="show" id="9Gz-pU-BWN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="133.74384236453201"/>
+            <point key="canvasLocation" x="983" y="132"/>
+        </scene>
+        <!--Detail Character View Controller-->
+        <scene sceneID="RYg-M0-NZD">
+            <objects>
+                <viewController storyboardIdentifier="DetailCharacterViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EHu-46-stg" customClass="DetailCharacterViewController" customModule="M08_Practica_UF2_Joel_Mario" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SVq-EU-UoM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vmE-b1-W51">
+                                <rect key="frame" x="16" y="195.33333333333334" width="343" height="421.33333333333326"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B9k-6b-mEb">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="381"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="343" id="ZUT-ym-DvK"/>
+                                            <constraint firstAttribute="width" constant="343" id="cjo-4Z-6HL"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="381" id="hvp-MY-ApF"/>
+                                            <constraint firstAttribute="height" constant="381" id="rrz-vY-RUE"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8V1-Vl-Vn6">
+                                        <rect key="frame" x="0.0" y="401" width="343" height="20.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="421.32999999999998" id="M6Y-M0-0ri"/>
+                                    <constraint firstAttribute="width" constant="343" id="vGJ-2k-w67"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vmE-b1-W51" firstAttribute="centerY" secondItem="SVq-EU-UoM" secondAttribute="centerY" id="0yB-gA-g94"/>
+                            <constraint firstItem="vmE-b1-W51" firstAttribute="centerX" secondItem="SVq-EU-UoM" secondAttribute="centerX" id="J2A-nm-m0T"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bIZ-hQ-wUi"/>
+                    </view>
+                    <connections>
+                        <outlet property="characterImage" destination="B9k-6b-mEb" id="BGt-kw-XdQ"/>
+                        <outlet property="characterName" destination="8V1-Vl-Vn6" id="o9t-DR-foV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MFd-gg-Dco" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1852" y="132.26600985221674"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fBI-JR-cCY">

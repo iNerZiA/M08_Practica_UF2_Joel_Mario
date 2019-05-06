@@ -13,6 +13,7 @@
 		EF59650C22773D280022BC81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF59650A22773D280022BC81 /* Main.storyboard */; };
 		EF59650E22773D290022BC81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF59650D22773D290022BC81 /* Assets.xcassets */; };
 		EF59651122773D290022BC81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF59650F22773D290022BC81 /* LaunchScreen.storyboard */; };
+		EFDD8DF722806BA2006F03E8 /* DetailCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDD8DF622806BA2006F03E8 /* DetailCharacterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		EF59650D22773D290022BC81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF59651022773D290022BC81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF59651222773D290022BC81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFDD8DF622806BA2006F03E8 /* DetailCharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCharacterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				EF59650622773D280022BC81 /* AppDelegate.swift */,
 				EF59650822773D280022BC81 /* ViewController.swift */,
 				EF14894D227B2C7900C4207A /* CharacterCollectionViewCell.swift */,
+				EFDD8DF622806BA2006F03E8 /* DetailCharacterViewController.swift */,
 				EF59650A22773D280022BC81 /* Main.storyboard */,
 				EF59650D22773D290022BC81 /* Assets.xcassets */,
 				EF59650F22773D290022BC81 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF14894E227B2C7900C4207A /* CharacterCollectionViewCell.swift in Sources */,
+				EFDD8DF722806BA2006F03E8 /* DetailCharacterViewController.swift in Sources */,
 				EF59650922773D280022BC81 /* ViewController.swift in Sources */,
 				EF59650722773D280022BC81 /* AppDelegate.swift in Sources */,
 			);

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
+class ViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource{
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -55,6 +55,14 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         cell.characterImage.image = charactersImage[indexPath.item]
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+       
+        let desVC = storyboard!.instantiateViewController(withIdentifier: "DetailCharacterViewController") as! DetailCharacterViewController
+        desVC.Image = charactersImage[indexPath.row]
+        desVC.name = characters[indexPath.row]
+        self.navigationController?.pushViewController(desVC, animated: true)
     }
 
 
