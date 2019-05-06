@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource{
     
+    var backgroundAudioPlayer: AVAudioPlayer?
+    
+    @IBOutlet weak var MusicSwitchButton: UISwitch!
     @IBOutlet weak var collectionView: UICollectionView!
     
     let characters = ["Iron Man","Thor","Thanos","Ronin","Natasha Romanoff","Captain America","War Machine","Spiderman","Captain Marvel","Rocket","Hulk","Black Panther"]
@@ -36,8 +40,21 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         collectionView.dataSource = self
         collectionView.delegate = self
         
+        if let backgroundsoundURL = Bundle.main.url(forResource: "The Avengers - Theme Song", withExtension: "mp3") {
+            do{
+                try backgroundAudioPlayer = AVAudioPlayer(contentsOf: backgroundsoundURL)
+                backgroundAudioPlayer?.numberOfLoops = Int(-1)
+                backgroundAudioPlayer?.prepareToPlay()
+                backgroundAudioPlayer?.play()
+                
+            } catch {
+                
+                print("No se ha podido inicializar el audio background")
+            }
+        }
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -65,6 +82,17 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         self.navigationController?.pushViewController(desVC, animated: true)
     }
 
+    @IBAction func musicSwitchChanged(_ sender: UISwitch) {
+        if sender.isOn {
+            //activate audio
+            backgroundAudioPlayer?.play()
+            print("Playing")
+        } else {
+            //cancel audio
+            backgroundAudioPlayer?.pause()
+            print("Paused")
+        }
+    }
 
 }
 

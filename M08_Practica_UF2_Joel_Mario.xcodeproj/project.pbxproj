@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC5589AA2280886700A00263 /* The Avengers - Theme Song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AC5589A92280886700A00263 /* The Avengers - Theme Song.mp3 */; };
 		EF14894E227B2C7900C4207A /* CharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF14894D227B2C7900C4207A /* CharacterCollectionViewCell.swift */; };
 		EF59650722773D280022BC81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF59650622773D280022BC81 /* AppDelegate.swift */; };
 		EF59650922773D280022BC81 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF59650822773D280022BC81 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC5589A92280886700A00263 /* The Avengers - Theme Song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "The Avengers - Theme Song.mp3"; path = "../../The Avengers - Theme Song.mp3"; sourceTree = "<group>"; };
 		EF14894D227B2C7900C4207A /* CharacterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCell.swift; sourceTree = "<group>"; };
 		EF59650322773D280022BC81 /* M08_Practica_UF2_Joel_Mario.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = M08_Practica_UF2_Joel_Mario.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF59650622773D280022BC81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 		EF59650522773D280022BC81 /* M08_Practica_UF2_Joel_Mario */ = {
 			isa = PBXGroup;
 			children = (
+				AC5589A92280886700A00263 /* The Avengers - Theme Song.mp3 */,
 				EF59650622773D280022BC81 /* AppDelegate.swift */,
 				EF59650822773D280022BC81 /* ViewController.swift */,
 				EF14894D227B2C7900C4207A /* CharacterCollectionViewCell.swift */,
@@ -130,6 +133,7 @@
 			files = (
 				EF59651122773D290022BC81 /* LaunchScreen.storyboard in Resources */,
 				EF59650E22773D290022BC81 /* Assets.xcassets in Resources */,
+				AC5589AA2280886700A00263 /* The Avengers - Theme Song.mp3 in Resources */,
 				EF59650C22773D280022BC81 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
