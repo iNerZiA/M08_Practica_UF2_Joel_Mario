@@ -94,12 +94,16 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B9k-6b-mEb">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="381"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="343" id="ZUT-ym-DvK"/>
                                             <constraint firstAttribute="width" constant="343" id="cjo-4Z-6HL"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="381" id="hvp-MY-ApF"/>
                                             <constraint firstAttribute="height" constant="381" id="rrz-vY-RUE"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="AcS-qF-mfb" appends="YES" id="ncD-Cc-fE0"/>
+                                        </connections>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8V1-Vl-Vn6">
                                         <rect key="frame" x="0.0" y="401" width="343" height="20.333333333333314"/>
@@ -127,6 +131,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MFd-gg-Dco" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="AcS-qF-mfb">
+                    <connections>
+                        <action selector="PianoCWithSender:" destination="EHu-46-stg" id="Z57-rF-fgr"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1852" y="132.26600985221674"/>
         </scene>

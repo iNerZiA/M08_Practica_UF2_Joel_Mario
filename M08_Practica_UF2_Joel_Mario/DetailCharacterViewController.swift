@@ -7,11 +7,11 @@
 //
 
 import UIKit
+import AVFoundation
 
 class DetailCharacterViewController: UIViewController {
 
     @IBOutlet weak var characterImage: UIImageView!
-    
     
     @IBOutlet weak var characterName: UILabel!
     
@@ -28,6 +28,17 @@ class DetailCharacterViewController: UIViewController {
         characterName.text = name
     }
     
+    let pianoSound = URL(fileURLWithPath: Bundle.main.path(forResource: "btn_click_sound", ofType: "mp3")!)
+    var audioPlayer = AVAudioPlayer()
+    
+    @IBAction func PianoC(sender: AnyObject) {
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: pianoSound)
+            audioPlayer.play()
+        } catch {
+            // couldn't load file :(
+        }
+    }
 
     /*
     // MARK: - Navigation
