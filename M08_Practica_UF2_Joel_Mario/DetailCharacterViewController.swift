@@ -11,13 +11,24 @@ import AVFoundation
 
 class DetailCharacterViewController: UIViewController {
 
-    @IBOutlet weak var characterImage: UIImageView!
+    
+    
+    @IBOutlet weak var characterImage: UIImageView!{
+        didSet{
+            let tapHeroe = UITapGestureRecognizer(target: self, action:#selector(soundHeroe(_:)))
+            characterImage.addGestureRecognizer(tapHeroe)
+            let panHeroe = UIPanGestureRecognizer(target: self, action: #selector(panHeroe(_:)))
+            characterImage.addGestureRecognizer(panHeroe)
+        }
+    }
+    
     
     @IBOutlet weak var characterName: UILabel!
     
     var Image = UIImage()
     var name = ""
     
+    var HeroeSound: SystemSoundID = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,20 +37,59 @@ class DetailCharacterViewController: UIViewController {
         
         characterImage.image = Image
         characterName.text = name
+        
+        //cogemos el sonido para el tap en la image
+        if let soundURL = Bundle.main.url(forResource: "breach", withExtension: "mp3"){
+            AudioServicesCreateSystemSoundID(soundURL as CFURL, &HeroeSound)
+        }
+        
     }
     
-    let pianoSound = URL(fileURLWithPath: Bundle.main.path(forResource: "btn_click_sound", ofType: "mp3")!)
+    override func viewDidAppear(_ animated: Bool) {
+        rotateHeroe(characterImage)
+    }
+    
+    func rotateHeroe(_ sender: UIImageView){
+        let animator = UIViewPropertyAnimator(duration: 1, curve: .easeInOut) {
+            sender.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
+        }
+        animator.startAnimation()
+    }
+    
+    
+    let pianoSound = URL(fileURLWithPath: Bundle.main.path(forResource: "breach", ofType: "mp3")!)
     var audioPlayer = AVAudioPlayer()
     
-    @IBAction func PianoC(sender: AnyObject) {
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: pianoSound)
-            audioPlayer.play()
-        } catch {
-            // couldn't load file :(
-        }
+    
+    @objc func soundHeroe(_ sender: UITapGestureRecognizer){
+        AudioServicesPlaySystemSound(HeroeSound)
     }
 
+    
+    
+    @objc func panGesture(_ sender: UIPanGestureRecognizer, HeroeView: UIImageView){
+        switch sender.state{
+        case .changed:
+            let translation = sender.translation(in: HeroeView)
+            let transforming = CGAffineTransform(translationX: translation.x, y: translation.y)
+            HeroeView.transform = transforming
+        //sender.setTranslation(CGPoint.zero, in: HeroeView)
+        case .ended:
+            let HeroeAnimator = UIViewPropertyAnimator(duration: 1, curve: .easeIn) {
+                HeroeView.transform = CGAffineTransform.identity
+            }
+            HeroeAnimator.startAnimation()
+            sender.setTranslation(CGPoint.zero, in: HeroeView)
+        default:
+            break
+        }
+    }
+    
+    //revisar el gesture recognizer no reconoce nada
+    @objc func panHeroe(_ sender: UIPanGestureRecognizer) {
+        panGesture(sender, HeroeView: characterImage)
+    }
+    
     /*
     // MARK: - Navigation
 
